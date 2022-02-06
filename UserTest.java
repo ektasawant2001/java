@@ -13,14 +13,16 @@ public class UserTest{
 	public static void main(String[] args){
 		//part1
 		User user = new User();
-		User Staff = new Staff();
+		User staff = new Staff();
 		User editor = new Editor();
+		staff.postAReview("");
+		((Staff)staff).printId();
 		
 		//UserTest ut = new UserTest();
 		/*ut.printUserType(user);
 		ut.printUserType(staff);
 		ut.printUserType(editor);
-		*/
+		
 		
 		//part 2
 		 //editor.approveReview();
@@ -31,5 +33,12 @@ public class UserTest{
 		UserTest ut = new UserTest();
 		//ut.approveReview(new Staff());
 		ut.approveReview(new Editor());
+		*/
+		//method binding demo
+		//User staff = new Staff();
+		staff.staticMethod(); // part1
+		//staff.postAReview(" ");
+		//staff.instanceMethod(10);//part2
+		staff.instanceMethod(new Staff());
 	}
 }
