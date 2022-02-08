@@ -1,6 +1,10 @@
 public class User{
 	public int id=1;
+	public String userType = "User";
 	
+	public User(){
+		System.out.println("User Constructor");
+	}
 	public void printUserType(){
 		//System.out.println("User");
 	}
@@ -22,6 +26,13 @@ public class User{
 	}
 	public void instanceMethod(User u){
 		System.out.println("User: instanceMethod");
+	}
+	public void displayUserInfo(){
+		System.out.println(this);
+	}
+	//@override
+	public String toString(){
+		return "\nPrinting user Info: "+"\nid: "+id+"\nuserType: "+userType;
 	}
 		
 }

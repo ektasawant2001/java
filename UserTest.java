@@ -13,10 +13,10 @@ public class UserTest{
 	public static void main(String[] args){
 		//part1
 		User user = new User();
-		User staff = new Staff();
+		//User staff = new Staff();
 		User editor = new Editor();
-		staff.postAReview("");
-		((Staff)staff).printId();
+		//staff.postAReview("");
+		//((Staff)staff).printId();
 		
 		//UserTest ut = new UserTest();
 		/*ut.printUserType(user);
@@ -36,9 +36,27 @@ public class UserTest{
 		*/
 		//method binding demo
 		//User staff = new Staff();
-		staff.staticMethod(); // part1
+		//staff.staticMethod(); // part1
 		//staff.postAReview(" ");
 		//staff.instanceMethod(10);//part2
-		staff.instanceMethod(new Staff());
+		//staff.instanceMethod(new Staff());
+		
+		/*//what is not overrriden
+		User staff = new Editor();
+		staff.staticMethod(); //early binding
+		((Staff) staff).staticMethod();
+		staff.saveWebLink();
+		*/
+		//overriding of instance variables demo
+		//User staff = new Staff();
+		//System.out.println("User type: "+ staff.userType); //early binding
+		//staff.displayUserInfo(); //comparison of field hiding and fieloverriding
+		//System.out.println(staff.toString());
+		
+		/*System.out.println(staff.hashCode());
+		User staff2 = staff;
+		System.out.println(staff2.hashCode());
+		*/
+		User staff = new Staff(3);
 	}
 }
