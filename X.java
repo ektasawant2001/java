@@ -1,3 +1,7 @@
+/**
+* @author XYZ Inc.
+*/
+
 public class X extends AbstractA implements A,B,C,Cloneable{
 	public void foo(){
 		System.out.println("X: foo");
@@ -15,5 +19,13 @@ public class X extends AbstractA implements A,B,C,Cloneable{
 			e.printStackTrace();
 		}
 		return null;
+	}
+	/*public void go(){ 
+		C.super.go();
+	}*/
+	
+	public void inheritanceTest(){
+		go();
+		//staticMethod();//error
 	}
 }
